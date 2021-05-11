@@ -17,13 +17,13 @@ namespace Kreditberechnung
         decimal Prozentsatz;
         private void EingabeBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && //erlaubt nur zahlen, punkt und minuszeichen
                 (e.KeyChar != '.') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
 
-            // only allow one decimal point
+            // erlaubt nur einen Punkt/Minus 
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
@@ -40,7 +40,7 @@ namespace Kreditberechnung
 
             InitializeComponent();
             this.EingabeBox1.KeyPress += new
-            System.Windows.Forms.KeyPressEventHandler(EingabeBox1_KeyPress);
+            System.Windows.Forms.KeyPressEventHandler(EingabeBox1_KeyPress); //registriert Event
         }
         private void button3_Click(object sender, EventArgs e)
         //das ist der Weiter Button
@@ -78,13 +78,20 @@ namespace Kreditberechnung
 
                 EingabeBox1.Text = "";
 
-                decimal Ergebnis = (Kreditwert / 100 * Prozentsatz)+Kredi
+                decimal Ergebnis = (Kreditwert / 100 * Prozentsatz) + Kreditwert;
+                MessageBox.Show("Kreditbetrag: " + Ergebnis, "Ergebnis", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                StepCounter++;
+                StepCounter = 0;
+                Kreditwert = 0;
+                Prozentsatz = 0;
+                label2.Text = "Geben Sie hier den Kreditbetrag ein";
+
+                //StepCounter++;
 
             }
             else if (StepCounter == 2)
             {
+
 
             }
         }

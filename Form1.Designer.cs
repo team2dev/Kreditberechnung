@@ -216,9 +216,9 @@ namespace Kreditberechnung
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(47, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 20);
+            this.label2.Size = new System.Drawing.Size(262, 20);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Tragen Sie hier den Kreditbetrag ein:";
+            this.label2.Text = "Geben Sie hier den Kreditbetrag ein";
             // 
             // DeleteButton
             // 
