@@ -1,7 +1,7 @@
 ﻿
 namespace Kreditberechnung
 {
-    partial class Form1
+    partial class EinmalKreditForm1
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -222,26 +222,27 @@ namespace Kreditberechnung
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Location = new System.Drawing.Point(232, 173);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(71, 50);
             this.DeleteButton.TabIndex = 20;
-            this.DeleteButton.Text = "<---";
+            this.DeleteButton.Text = "⌫";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // NRButton
             // 
-            this.NRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NRButton.Location = new System.Drawing.Point(320, 81);
+            this.NRButton.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.NRButton.Location = new System.Drawing.Point(359, 47);
             this.NRButton.Name = "NRButton";
-            this.NRButton.Size = new System.Drawing.Size(122, 42);
+            this.NRButton.Size = new System.Drawing.Size(52, 58);
             this.NRButton.TabIndex = 21;
-            this.NRButton.Text = "Nebenrechner";
+            this.NRButton.Text = "";
             this.NRButton.UseVisualStyleBackColor = true;
+            this.NRButton.Click += new System.EventHandler(this.NRButton_Click);
             // 
-            // Form1
+            // EinmalKreditForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,7 +266,7 @@ namespace Kreditberechnung
             this.Controls.Add(this.Zahl1);
             this.Controls.Add(this.EingabeBox1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "EinmalKreditForm1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Just4You - Kreditberechnung";

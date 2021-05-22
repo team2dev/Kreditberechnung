@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Kreditberechnung
 {
-    public partial class Form1 : Form
+    public partial class EinmalKreditForm1 : Form
     {
         int StepCounter = 0;
         decimal Kreditwert;
@@ -34,7 +34,7 @@ namespace Kreditberechnung
             }
         }
 
-        public Form1()
+        public EinmalKreditForm1()
 
         {
 
@@ -108,5 +108,9 @@ namespace Kreditberechnung
             EingabeBox1.Text = "";
         }
 
+        private void NRButton_Click(object sender, EventArgs e)
+        {
+            //ich hab keine Ahnung wie das verknüpfen funktioniert
+        }
     }
 }

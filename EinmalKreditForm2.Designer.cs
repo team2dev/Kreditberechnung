@@ -1,7 +1,7 @@
 ﻿
 namespace Kreditberechnung
 {
-    partial class Form2
+    partial class EinmalKreditForm2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace Kreditberechnung
         /// </summary>
         private void InitializeComponent()
         {
-            this.NRButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,27 +46,19 @@ namespace Kreditberechnung
             this.Zahl2 = new System.Windows.Forms.Button();
             this.Zahl1 = new System.Windows.Forms.Button();
             this.EingabeBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // NRButton
-            // 
-            this.NRButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NRButton.Location = new System.Drawing.Point(320, 81);
-            this.NRButton.Name = "NRButton";
-            this.NRButton.Size = new System.Drawing.Size(122, 42);
-            this.NRButton.TabIndex = 39;
-            this.NRButton.Text = "Nebenrechner";
-            this.NRButton.UseVisualStyleBackColor = true;
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Location = new System.Drawing.Point(232, 173);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(71, 50);
             this.DeleteButton.TabIndex = 38;
-            this.DeleteButton.Text = "<---";
+            this.DeleteButton.Text = "⌫";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // label2
             // 
@@ -75,9 +66,9 @@ namespace Kreditberechnung
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(47, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 20);
+            this.label2.Size = new System.Drawing.Size(263, 20);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Tragen Sie hier den Kreditbetrag ein:";
+            this.label2.Text = "Tragen Sie hier den Kreditbetrag ein";
             // 
             // label1
             // 
@@ -227,12 +218,22 @@ namespace Kreditberechnung
             this.EingabeBox1.Size = new System.Drawing.Size(239, 31);
             this.EingabeBox1.TabIndex = 22;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Webdings", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button1.Location = new System.Drawing.Point(359, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 58);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 450);
-            this.Controls.Add(this.NRButton);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -250,6 +251,7 @@ namespace Kreditberechnung
             this.Controls.Add(this.Zahl2);
             this.Controls.Add(this.Zahl1);
             this.Controls.Add(this.EingabeBox1);
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -259,8 +261,6 @@ namespace Kreditberechnung
         }
 
         #endregion
-
-        private System.Windows.Forms.Button NRButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -278,5 +278,6 @@ namespace Kreditberechnung
         private System.Windows.Forms.Button Zahl2;
         private System.Windows.Forms.Button Zahl1;
         private System.Windows.Forms.TextBox EingabeBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -10,17 +10,26 @@ using System.Windows.Forms;
 
 namespace Kreditberechnung
 {
-    public partial class Form2 : Form
+    public partial class EinmalKreditForm2 : Form
     {
-        public Form2(string String_Wert)
+        public EinmalKreditForm2(string String_Wert)
         {
             InitializeComponent();
             EingabeBox1.Text = String_Wert;
         }
 
+        public EinmalKreditForm2()
+        {
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            EingabeBox1.Text = "";
         }
     }
 }
